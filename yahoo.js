@@ -28,7 +28,7 @@ if(captchaword) {
 	yahoo_api.login = yahoo_api.login_captcha;
 }
 
-var hash = require('hashlib');
+var hash = require('./md5.js');
 var querystring = require('querystring');
 var rest = require('restler');
 function randomString(time) {
