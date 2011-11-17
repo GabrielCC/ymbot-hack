@@ -4,7 +4,7 @@
 var yahoo_user = {
 	username : 'gabrielassistant',
 	password : 'qwaszx110887',
-	friend   : 'gabriel_croitoru11',
+	friend   : 'caval_daniel_ionut',
 	requestToken : false,
 	request_params : false
 	};
