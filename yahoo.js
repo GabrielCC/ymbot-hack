@@ -106,9 +106,12 @@ function setSessionIdFromData(data) {
     var params = eval(data);
     var session_id = params.sessionId;
     yahoo_user.sessionID = session_id;
+    yahoo_user.oauth_signature = yahoo_secret + '%26' + yahoo_user.request_params.oauth_token_secret;
+    yahoo_user.oauth_token = yahoo_user.request_params.oauth_token;
 }
 
 function generateCompleteUrl(url) {
+    var time = Math.floor(new Date().getTime() / 1000);
     url += '&oauth_consumer_key=' + yahoo_key;
     url += '&realm=yahooapis.com'
     url += '&oauth_nonce=' + randomString(time);
@@ -132,13 +135,9 @@ function getJsonHeader() {
 
 function sendPm(user, message) {
     var session_id = yahoo_user.sessionID;
-    var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + yahoo_user.user + '?sid=' + session_id;
-    var time = Math.floor(new Date().getTime() / 1000);
-    yahoo_user.oauth_signature = yahoo_secret + '%26' + yahoo_user.request_params.oauth_token_secret;
-    yahoo_user.oauth_token = yahoo_user.request_params.oauth_token;
+    var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + user + '?sid=' + session_id;
+    
     url = generateCompleteUrl(url);
-
-
     error_flag = false;
     var smessage = '{"message" : message}';
     smessage = {
@@ -149,7 +148,7 @@ function sendPm(user, message) {
         data: smessage
     }).on('success', function(data) {
         if (!error_flag) {
-            get_messages_interval = setInterval(getMessages, 6000);
+            
         }
     }).on('error', errorCallback);
 
@@ -197,7 +196,8 @@ function signIn(data) {
         data: presence
     }).on('complete', function(data) {
         yahoo_user.auth_user_data = eval(data);
-        sendPm(data);
+        sendPm(yahoo_user.admin, "Hello from NodeJS land");
+        get_messages_interval = setInterval(getMessages, 5000);
     }).on('error', errorCallback);
 }
 
@@ -243,10 +243,15 @@ function readCaptchaWord() {
 
 
 //exports functionality
+//basic login function
 exports.login = function() {
     login();
-}
+};
 
-exports.sendMessage(user, message) {
+/**
+ * Send a message
+ *
+ */
+exports.sendMessage = function(user, message) {
     sendPm(user, messenger);
-}
+};
