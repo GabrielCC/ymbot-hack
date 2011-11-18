@@ -1,13 +1,17 @@
 // Import the optparse script
-var COMMAND_CHAR = '+';
-var COMMAND_STRING = '/^' + COMMAND_CHAR + '(\w) (.*)$/';
+var COMMAND_CHAR = "\\+";
+var COMMAND_STRING = '^' + COMMAND_CHAR + "(\\w*) (.*)$";
 var parser = {
     rules : {},
     on: function(value, fn) {
         this.rules[value] = fn;
     },
     parse: function(message) {
-        console.log(COMMAND_STRING);
+        var regexp = new RegExp(COMMAND_STRING);
+        var parts = regexp.exec(message);
+        if(parts) {
+            this.process_command(parts[1], _args);
+        }
     }
 };
 
