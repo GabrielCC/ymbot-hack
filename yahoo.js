@@ -157,7 +157,7 @@ function sendPm(user, message) {
 
 function errorCallback(data) {
     console.log('there was an error');
-    //console.log('data');
+    console.log(data);
 }
 var error_flag = false;
 
