@@ -5,7 +5,11 @@ var yahoo_user = {
     password: 'qwaszx110887',
     friend: 'gabriel_croitoru11',
     requestToken: false,
-    request_params: false
+    request_params: false,
+    sessionID: false,
+    oauth_token: false,
+    oauth_signature: false,
+    auth_data: false
 };
 var presence = '{ }';
 var yahoo_key = 'dj0yJmk9d2ozTWlnQXJINzVGJmQ9WVdrOVltTmlaMWhrTm1jbWNHbzlNVGczT1RrMk1nLS0mcz1jb25zdW1lcnNlY3JldCZ4PTJh';
@@ -19,12 +23,10 @@ var yahoo_api = {
     login: 'https://login.yahoo.com/WSLogin/V1/get_auth_token?&login=' + yahoo_user.username + '&passwd=' + yahoo_user.password + '&oauth_consumer_key=' + yahoo_key,
     login_captcha: 'https://login.yahoo.com/WSLogin/V1/get_auth_token?&login=' + yahoo_user.username + '&passwd=' + yahoo_user.password + '&oauth_consumer_key=' + yahoo_key + '&captchadata=' + captchadata + '&captchaword=' + captchaword,
     server: 'http://developer.mesclsenger.yahooapis.com/',
-    notification_server: 'http://rproxy1.messenger.yahooapis.com/',
+    notification_server: 'http://developer.messenger.yahooapis.com/v1/notifications',
     contacts: 'v1/session?fieldsBuddyList=%2Bgroups',
     presence: 'v1/presence?sid=',
-    sessionID: false,
-    oauth_token: false,
-    oauth_signature: false
+
 }
 
 if (captchaword) {
@@ -58,14 +60,34 @@ function oauthCredentials() {
     }).on('error', errorCallback);
 }
 
-function getMessages(data) {
-
+var messages_count = 1;
+var get_messages_interval;
+function getMessages() {
+    messages_count += 1;
+    if(messages_count == 10) {
+        clearInterval(get_messages_interval);
+    };
     var session_id = yahoo_user.sessionID;
-    var url = yahoo_user.notification_server + '?sid=' + session_id + '&seq=' + 5;
+    var url = yahoo_api.notification_server + '?sid=' + session_id + '&seq=' + 5;
     url = generateCompleteUrl(url);
-    rest.get(url).on('complete', function(data) {
-        console.log(data);
+    url += '&count=100';
+
+    rest.get(url, {
+        headers: getJsonHeader()
+    }).on('success', function(data) {
+        parseResponseMessage(data);
     }).on('error', errorCallback);
+}
+
+function parseResponseMessage(data) {
+    var response = eval(data);
+    if( response.responses.length > 0 ) {
+        var individual_response;
+        for(var i in response.responses) {
+            individual_response = response.responses[i];
+            console.log(individual_response);
+        }
+    }
 }
 
 function getSessionIdFromData(data) {
@@ -85,9 +107,17 @@ function generateCompleteUrl(url) {
     url += '&oauth_token=' + querystring.escape(yahoo_user.oauth_token);
     url += '&oauth_version=1.0';
     url += '&notifyServerToken=1';
+
     return url;
 }
 
+function getJsonHeader() {
+    var header = {
+        'Content-Type': 'application/json',
+        'charset': 'utf-8'
+    };
+    return header;
+}
 
 function sendPm(data) {
     var session_id = getSessionIdFromData(data);
@@ -96,19 +126,16 @@ function sendPm(data) {
     yahoo_user.oauth_signature = yahoo_secret + '%26' + yahoo_user.request_params.oauth_token_secret;
     yahoo_user.oauth_token = yahoo_user.request_params.oauth_token;
     url = generateCompleteUrl(url);
-    var header = {
-        'Content-Type': 'application/json',
-        'charset': 'utf-8'
-    };
+
 
     error_flag = false;
     var smessage = '{"message" : "Hello from nodejs land"}';
     rest.post(url, {
-        headers: header,
+        headers: getJsonHeader(),
         data: smessage
     }).on('success', function(data) {
         if (!error_flag) {
-            getMessages(data);
+            get_messages_interval = setInterval(getMessages,  6000 );
         }
     }).on('error', errorCallback);
 
@@ -155,6 +182,7 @@ function signIn(data) {
         headers: header,
         data: presence
     }).on('complete', function(data) {
+        yahoo_user.auth_user_data = eval(data);
         sendPm(data);
     }).on('error', errorCallback);
 }
