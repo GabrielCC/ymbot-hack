@@ -11,6 +11,7 @@ var yahoo_user = {
     oauth_signature: false,
     auth_data: false
 };
+var TOTAL_GET_MESSAGES = 1000;
 var presence = '{ }';
 var yahoo_key = 'dj0yJmk9d2ozTWlnQXJINzVGJmQ9WVdrOVltTmlaMWhrTm1jbWNHbzlNVGczT1RrMk1nLS0mcz1jb25zdW1lcnNlY3JldCZ4PTJh';
 yahoo_key = 'dj0yJmk9c3hOWTNJTnBVbE1UJmQ9WVdrOVltTmlaMWhrTm1jbWNHbzlNVGczT1RrMk1nLS0mcz1jb25zdW1lcnNlY3JldCZ4PTg2';
@@ -64,9 +65,13 @@ var messages_count = 1;
 var get_messages_interval;
 function getMessages() {
     messages_count += 1;
-    if(messages_count == 10) {
+    if(messages_count == TOTAL_GET_MESSAGES) {
         clearInterval(get_messages_interval);
-    };
+    }
+    else{
+        console.log('by, by');
+        process.exit();
+    }
     var session_id = yahoo_user.sessionID;
     var url = yahoo_api.notification_server + '?sid=' + session_id + '&seq=' + 5;
     url = generateCompleteUrl(url);
