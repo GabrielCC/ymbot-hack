@@ -63,17 +63,16 @@ function oauthCredentials() {
 
 var messages_count = 1;
 var get_messages_interval;
+var start_notifications = -1;
 function getMessages() {
     messages_count += 1;
-    if(messages_count == TOTAL_GET_MESSAGES) {
+    if (messages_count == TOTAL_GET_MESSAGES) {
         clearInterval(get_messages_interval);
-    }
-    else{
         console.log('by, by');
         process.exit();
     }
     var session_id = yahoo_user.sessionID;
-    var url = yahoo_api.notification_server + '?sid=' + session_id + '&seq=' + 5;
+    var url = yahoo_api.notification_server + '?sid=' + session_id + '&seq=' + (start_notifications + 1);
     url = generateCompleteUrl(url);
     url += '&count=100';
 
@@ -86,11 +85,15 @@ function getMessages() {
 
 function parseResponseMessage(data) {
     var response = eval(data);
-    if( response.responses.length > 0 ) {
+    if (response.responses.length > 0) {
+        start_notifications += response.responses.length;
         var individual_response;
-        for(var i in response.responses) {
-            individual_response = response.responses[i];
-            console.log(individual_response);
+        for (var i in response.responses) {
+            individual_response = eval(response.responses[i]);
+            if(individual_response.buddyInfo != undefined) {
+                continue;
+            }
+            console.log(individual_response.message.sender + ': ' + individual_response.message.msg );
         }
     }
 }
@@ -140,7 +143,7 @@ function sendPm(data) {
         data: smessage
     }).on('success', function(data) {
         if (!error_flag) {
-            get_messages_interval = setInterval(getMessages,  6000 );
+            get_messages_interval = setInterval(getMessages, 6000);
         }
     }).on('error', errorCallback);
 
