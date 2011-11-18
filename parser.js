@@ -1,39 +1,44 @@
 // Import the optparse script
 var COMMAND_CHAR = "\\+";
-var COMMAND_STRING = '^' + COMMAND_CHAR + "(\\w*) (.*)$";
+var COMMAND_STRING = '^' + COMMAND_CHAR + "(\\w*)(.*?)$";
+var COMMAND_STRING_SIMPLE = '^' + COMMAND_CHAR + "(\\w*)";
 var parser = {
-    rules : {},
-    on: function(value, fn) {
+    rules: {},
+    help_messages: {},
+    on: function(value, message, fn) {
         this.rules[value] = fn;
+        this.help_messages[value] = message;
     },
-    parse: function(message) {
-        var regexp = new RegExp(COMMAND_STRING);
+    parse: function(user, message) {
+        var regexp = new RegExp(COMMAND_STRING, "gxm");
         var parts = regexp.exec(message);
-        if(parts) {
-            this.processCommand(parts[1], parts[2]);
+        if (parts) {
+            this.processCommand(user, parts[1], parts[2]);
+        }
+	
+    },
+    processCommand: function(user, command, _args) {
+        if (this.rules[command]) {
+            this.rules[command](user, _args);
+        }
+        else {
+            this.help(user);
         }
     },
-    processCommand: function (command, _args) {
-        if( this.rules[command] ) {
-            this.rules[command](_args);
-        }
-        else{
-            this.help();
-        }
-    },
-    help: function() {
+    help: function(user) {
         console.log('Unpropper use of the commands');
+        console.log('Available commands:');
+        for(var i in this.help_messages) {
+            console.log('+' +  i + '   ' + this.help_messages[i]);
+        }
     }
 };
-
-
 /**
  * Exports section
  */
-exports.parse = function(message) {
-    parser.parse(message);
+exports.parse = function(user, message) {
+    parser.parse(user, message);
 };
-
-exports.on = function(command, _function) {
-    parser.on(command, _function);
+exports.on = function(command, message, _function) {
+    parser.on(command, message, _function);
 };

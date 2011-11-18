@@ -1,0 +1,1421 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/usr/bin/npm',
+verbose cli   'install',
+verbose cli   '-g',
+verbose cli   'node-inspector' ]
+info using npm@1.0.104
+info using node@v0.4.7
+verbose config file /home/user/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/lib/node_modules/npm/npmrc
+verbose into /usr/local/lib [ 'node-inspector' ]
+verbose cache add node-inspector
+verbose cache add [ 'node-inspector', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'node-inspector',
+silly cache add: name, spec, args   [ 'node-inspector', null ] ]
+verbose parsed url { pathname: 'node-inspector', href: 'node-inspector' }
+info addNamed [ 'node-inspector', '' ]
+verbose addNamed [ null, '' ]
+verbose GET node-inspector
+verbose raw, before any munging node-inspector
+verbose url resolving [ 'http://registry.npmjs.org/', './node-inspector' ]
+verbose url resolved http://registry.npmjs.org/node-inspector
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"8SVRWQVMCI5LUTAFP7AM6D6DU"',
+silly get cb     date: 'Fri, 18 Nov 2011 21:19:24 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '11251' } ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/home/user/.npm/node-inspector'
+verbose mkdir done: /home/user/.npm/node-inspector 755
+verbose GET node-inspector/0.1.10
+verbose raw, before any munging node-inspector/0.1.10
+verbose url resolving [ 'http://registry.npmjs.org/',
+verbose url resolving   './node-inspector/0.1.10' ]
+verbose url resolved http://registry.npmjs.org/node-inspector/0.1.10
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"8SVRWQVMCI5LUTAFP7AM6D6DU"',
+silly get cb     date: 'Fri, 18 Nov 2011 21:19:25 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '1024' } ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/home/user/.npm/node-inspector/0.1.10'
+verbose mkdir done: /home/user/.npm/node-inspector/0.1.10 755
+verbose bin dist [ '0.4-ares1.7.4-ev4.4-openssl0.9.8o-v83.1.8.10-linux-2.6.38-8-generic',
+verbose bin dist   { shasum: '92520889108761231acd20fecd9f04e297e563e2',
+verbose bin dist     tarball: 'http://registry.npmjs.org/node-inspector/-/node-inspector-0.1.10.tgz' } ]
+verbose addRemoteTarball [ 'http://registry.npmjs.org/node-inspector/-/node-inspector-0.1.10.tgz',
+verbose addRemoteTarball   '92520889108761231acd20fecd9f04e297e563e2' ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1321651163004'
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1321651163004/1321651163004-0.5027258263435215'
+verbose mkdir done: /tmp/npm-1321651163004/1321651163004-0.5027258263435215 755
+info fetch http://registry.npmjs.org/node-inspector/-/node-inspector-0.1.10.tgz
+verbose fetch to /tmp/npm-1321651163004/1321651163004-0.5027258263435215/tmp.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 12798
+info shasum 92520889108761231acd20fecd9f04e297e563e2
+info shasum /tmp/npm-1321651163004/1321651163004-0.5027258263435215/tmp.tgz
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents'
+verbose mkdir (expected) error ENOENT, No such file or directory '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm'
+verbose mkdir done: /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly spawning [ 'tar',
+silly spawning   [ '-zmvxpf',
+silly spawning     '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/tmp.tgz' ],
+silly spawning   '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm' ]
+silly tar out package/.gitignore
+silly tar out package/ChangeLog
+silly tar out package/config.json
+silly tar out package/package.json
+silly tar out package/readme.md
+silly tar out package/bin/inspector.js
+silly tar out package/lib/callback.js
+silly tar out package/lib/debug-server.js
+silly tar out package/lib/debugger.js
+silly tar out package/lib/session.js
+silly tar out package/test/hello.js
+silly tar out package/front-end/ApplicationCacheItemsView.js
+silly tar out package/front-end/AuditCategories.js
+silly tar out package/front-end/AuditFormatters.js
+silly tar out package/front-end/AuditLauncherView.js
+silly tar out package/front-end/AuditResultView.js
+silly tar out package/front-end/AuditRules.js
+silly tar out package/front-end/audits.css
+silly tar out package/front-end/AuditsPanel.js
+silly tar out package/front-end/BottomUpProfileDataGridTree.js
+silly tar out package/front-end/BreakpointManager.js
+silly tar out package/front-end/BreakpointsSidebarPane.js
+silly tar out package/front-end/Callback.js
+silly tar out package/front-end/CallStackSidebarPane.js
+silly tar out package/front-end/ChangesView.js
+silly tar out package/front-end/Checkbox.js
+silly tar out package/front-end/Color.js
+silly tar out package/front-end/ConsolePanel.js
+silly tar out package/front-end/ConsoleView.js
+silly tar out package/front-end/ContextMenu.js
+silly tar out package/front-end/CookieItemsView.js
+silly tar out package/front-end/CookieParser.js
+silly tar out package/front-end/CookiesTable.js
+silly tar out package/front-end/CSSCompletions.js
+silly tar out package/front-end/CSSStyleModel.js
+silly tar out package/front-end/Database.js
+silly tar out package/front-end/DatabaseQueryView.js
+silly tar out package/front-end/DatabaseTableView.js
+silly tar out package/front-end/DataGrid.js
+silly tar out package/front-end/DOMAgent.js
+silly tar out package/front-end/DOMStorage.js
+silly tar out package/front-end/DOMStorageItemsView.js
+silly tar out package/front-end/DOMSyntaxHighlighter.js
+silly tar out package/front-end/Drawer.js
+silly tar out package/front-end/ElementsPanel.js
+silly tar out package/front-end/ElementsTreeOutline.js
+silly tar out package/front-end/EventListenersSidebarPane.js
+silly tar out package/front-end/ExtensionAPI.js
+silly tar out package/front-end/ExtensionAuditCategory.js
+silly tar out package/front-end/ExtensionCommon.js
+silly tar out package/front-end/ExtensionPanel.js
+silly tar out package/front-end/ExtensionRegistryStub.js
+silly tar out package/front-end/ExtensionServer.js
+silly tar out package/front-end/FileSystemView.js
+silly tar out package/front-end/FontView.js
+silly tar out package/front-end/goToLineDialog.css
+silly tar out package/front-end/GoToLineDialog.js
+silly tar out package/front-end/HAREntry.js
+silly tar out package/front-end/heapProfiler.css
+silly tar out package/front-end/HeapSnapshotView.js
+silly tar out package/front-end/helpScreen.css
+silly tar out package/front-end/HelpScreen.js
+silly tar out package/front-end/ImageView.js
+silly tar out package/front-end/index.html
+silly tar out package/front-end/InjectedFakeWorker.js
+silly tar out package/front-end/InjectedScript.js
+silly tar out package/front-end/InjectedScriptAccess.js
+silly tar out package/front-end/inspector.css
+silly tar out package/front-end/inspector.html
+silly tar out package/front-end/inspector.js
+silly tar out package/front-end/InspectorBackendStub.qrc
+silly tar out package/front-end/InspectorFrontendHostStub.js
+silly tar out package/front-end/inspectorSyntaxHighlight.css
+silly tar out package/front-end/KeyboardShortcut.js
+silly tar out package/front-end/MetricsSidebarPane.js
+silly tar out package/front-end/NetworkItemView.js
+silly tar out package/front-end/networkPanel.css
+silly tar out package/front-end/NetworkPanel.js
+silly tar out package/front-end/Object.js
+silly tar out package/front-end/ObjectPropertiesSection.js
+silly tar out package/front-end/Panel.js
+silly tar out package/front-end/PanelEnablerView.js
+silly tar out package/front-end/Placard.js
+silly tar out package/front-end/popover.css
+silly tar out package/front-end/Popover.js
+silly tar out package/front-end/ProfileDataGridTree.js
+silly tar out package/front-end/ProfilesPanel.js
+silly tar out package/front-end/ProfileView.js
+silly tar out package/front-end/PropertiesSection.js
+silly tar out package/front-end/PropertiesSidebarPane.js
+silly tar out package/front-end/RemoteObject.js
+silly tar out package/front-end/Resource.js
+silly tar out package/front-end/ResourceCategory.js
+silly tar out package/front-end/ResourceCookiesView.js
+silly tar out package/front-end/ResourceHeadersView.js
+silly tar out package/front-end/ResourceManager.js
+silly tar out package/front-end/ResourcesPanel.js
+silly tar out package/front-end/ResourceTimingView.js
+silly tar out package/front-end/ResourceView.js
+silly tar out package/front-end/ScopeChainSidebarPane.js
+silly tar out package/front-end/Script.js
+silly tar out package/front-end/ScriptsPanel.js
+silly tar out package/front-end/ScriptView.js
+silly tar out package/front-end/Section.js
+silly tar out package/front-end/Settings.js
+silly tar out package/front-end/ShortcutsHelp.js
+silly tar out package/front-end/SidebarPane.js
+silly tar out package/front-end/SidebarTreeElement.js
+silly tar out package/front-end/SourceCSSTokenizer.js
+silly tar out package/front-end/SourceCSSTokenizer.re2js
+silly tar out package/front-end/SourceFrame.js
+silly tar out package/front-end/SourceHTMLTokenizer.js
+silly tar out package/front-end/SourceHTMLTokenizer.re2js
+silly tar out package/front-end/SourceJavaScriptTokenizer.js
+silly tar out package/front-end/SourceJavaScriptTokenizer.re2js
+silly tar out package/front-end/SourceTokenizer.js
+silly tar out package/front-end/SourceView.js
+silly tar out package/front-end/StatusBarButton.js
+silly tar out package/front-end/StylesSidebarPane.js
+silly tar out package/front-end/SummaryBar.js
+silly tar out package/front-end/TabbedPane.js
+silly tar out package/front-end/TestController.js
+silly tar out package/front-end/TextEditorHighlighter.js
+silly tar out package/front-end/TextEditorModel.js
+silly tar out package/front-end/TextPrompt.js
+silly tar out package/front-end/textViewer.css
+silly tar out package/front-end/TextViewer.js
+silly tar out package/front-end/TimelineAgent.js
+silly tar out package/front-end/TimelineGrid.js
+silly tar out package/front-end/TimelineOverviewPane.js
+silly tar out package/front-end/TimelinePanel.js
+silly tar out package/front-end/TopDownProfileDataGridTree.js
+silly tar out package/front-end/treeoutline.js
+silly tar out package/front-end/utilities.js
+silly tar out package/front-end/View.js
+silly tar out package/front-end/WatchExpressionsSidebarPane.js
+silly tar out package/front-end/WebKit.qrc
+silly tar out package/front-end/WelcomeView.js
+silly tar out package/front-end/WorkersSidebarPane.js
+silly tar out package/front-end/Images/auditsIcon.png
+silly tar out package/front-end/Images/applicationCache.png
+silly tar out package/front-end/Images/back.png
+silly tar out package/front-end/Images/breakpointBorder.png
+silly tar out package/front-end/Images/breakpointConditionalBorder.png
+silly tar out package/front-end/Images/breakpointConditionalCounterBorder.png
+silly tar out package/front-end/Images/breakpointCounterBorder.png
+silly tar out package/front-end/Images/breakpointsActivateButtonGlyph.png
+silly tar out package/front-end/Images/breakpointsDeactivateButtonGlyph.png
+silly tar out package/front-end/Images/checker.png
+silly tar out package/front-end/Images/clearConsoleButtonGlyph.png
+silly tar out package/front-end/Images/closeButtons.png
+silly tar out package/front-end/Images/consoleButtonGlyph.png
+silly tar out package/front-end/Images/consoleIcon.png
+silly tar out package/front-end/Images/cookie.png
+silly tar out package/front-end/Images/database.png
+silly tar out package/front-end/Images/databaseTable.png
+silly tar out package/front-end/Images/debuggerContinue.png
+silly tar out package/front-end/Images/debuggerPause.png
+silly tar out package/front-end/Images/debuggerStepInto.png
+silly tar out package/front-end/Images/debuggerStepOut.png
+silly tar out package/front-end/Images/debuggerStepOver.png
+silly tar out package/front-end/Images/disclosureTriangleSmallDown.png
+silly tar out package/front-end/Images/disclosureTriangleSmallDownBlack.png
+silly tar out package/front-end/Images/disclosureTriangleSmallDownWhite.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRight.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightBlack.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightDown.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightDownBlack.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightDownWhite.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightWhite.png
+silly tar out package/front-end/Images/dockButtonGlyph.png
+silly tar out package/front-end/Images/elementsIcon.png
+silly tar out package/front-end/Images/enableOutlineButtonGlyph.png
+silly tar out package/front-end/Images/enableSolidButtonGlyph.png
+silly tar out package/front-end/Images/errorIcon.png
+silly tar out package/front-end/Images/errorMediumIcon.png
+silly tar out package/front-end/Images/errorRedDot.png
+silly tar out package/front-end/Images/excludeButtonGlyph.png
+silly tar out package/front-end/Images/focusButtonGlyph.png
+silly tar out package/front-end/Images/forward.png
+silly tar out package/front-end/Images/frame.png
+silly tar out package/front-end/Images/gearButtonGlyph.png
+silly tar out package/front-end/Images/glossyHeader.png
+silly tar out package/front-end/Images/glossyHeaderPressed.png
+silly tar out package/front-end/Images/glossyHeaderSelected.png
+silly tar out package/front-end/Images/glossyHeaderSelectedPressed.png
+silly tar out package/front-end/Images/goArrow.png
+silly tar out package/front-end/Images/graphLabelCalloutLeft.png
+silly tar out package/front-end/Images/graphLabelCalloutRight.png
+silly tar out package/front-end/Images/largerResourcesButtonGlyph.png
+silly tar out package/front-end/Images/localStorage.png
+silly tar out package/front-end/Images/networkIcon.png
+silly tar out package/front-end/Images/nodeSearchButtonGlyph.png
+silly tar out package/front-end/Images/paneAddButtons.png
+silly tar out package/front-end/Images/paneBottomGrow.png
+silly tar out package/front-end/Images/paneBottomGrowActive.png
+silly tar out package/front-end/Images/paneGrowHandleLine.png
+silly tar out package/front-end/Images/paneSettingsButtons.png
+silly tar out package/front-end/Images/pauseOnExceptionButtonGlyph.png
+silly tar out package/front-end/Images/percentButtonGlyph.png
+silly tar out package/front-end/Images/popoverArrows.png
+silly tar out package/front-end/Images/popoverBackground.png
+silly tar out package/front-end/Images/profileGroupIcon.png
+silly tar out package/front-end/Images/profileIcon.png
+silly tar out package/front-end/Images/profilesIcon.png
+silly tar out package/front-end/Images/profileSmallIcon.png
+silly tar out package/front-end/Images/profilesSilhouette.png
+silly tar out package/front-end/Images/programCounterBorder.png
+silly tar out package/front-end/Images/radioDot.png
+silly tar out package/front-end/Images/recordButtonGlyph.png
+silly tar out package/front-end/Images/recordToggledButtonGlyph.png
+silly tar out package/front-end/Images/reloadButtonGlyph.png
+silly tar out package/front-end/Images/resourceCSSIcon.png
+silly tar out package/front-end/Images/resourceDocumentIcon.png
+silly tar out package/front-end/Images/resourceDocumentIconSmall.png
+silly tar out package/front-end/Images/resourceJSIcon.png
+silly tar out package/front-end/Images/resourcePlainIcon.png
+silly tar out package/front-end/Images/resourcePlainIconSmall.png
+silly tar out package/front-end/Images/resourcesIcon.png
+silly tar out package/front-end/Images/resourcesSizeGraphIcon.png
+silly tar out package/front-end/Images/resourcesTimeGraphIcon.png
+silly tar out package/front-end/Images/scriptsIcon.png
+silly tar out package/front-end/Images/scriptsSilhouette.png
+silly tar out package/front-end/Images/searchSmallBlue.png
+silly tar out package/front-end/Images/searchSmallBrightBlue.png
+silly tar out package/front-end/Images/searchSmallGray.png
+silly tar out package/front-end/Images/searchSmallWhite.png
+silly tar out package/front-end/Images/segment.png
+silly tar out package/front-end/Images/segmentEnd.png
+silly tar out package/front-end/Images/segmentHover.png
+silly tar out package/front-end/Images/segmentHoverEnd.png
+silly tar out package/front-end/Images/segmentSelected.png
+silly tar out package/front-end/Images/segmentSelectedEnd.png
+silly tar out package/front-end/Images/sessionStorage.png
+silly tar out package/front-end/Images/spinner.gif
+silly tar out package/front-end/Images/splitviewDimple.png
+silly tar out package/front-end/Images/splitviewDividerBackground.png
+silly tar out package/front-end/Images/statusbarBackground.png
+silly tar out package/front-end/Images/statusbarBottomBackground.png
+silly tar out package/front-end/Images/statusbarButtons.png
+silly tar out package/front-end/Images/statusbarMenuButton.png
+silly tar out package/front-end/Images/statusbarMenuButtonSelected.png
+silly tar out package/front-end/Images/statusbarResizerHorizontal.png
+silly tar out package/front-end/Images/statusbarResizerVertical.png
+silly tar out package/front-end/Images/successGreenDot.png
+silly tar out package/front-end/Images/thumbActiveHoriz.png
+silly tar out package/front-end/Images/thumbActiveVert.png
+silly tar out package/front-end/Images/thumbHoriz.png
+silly tar out package/front-end/Images/thumbHoverHoriz.png
+silly tar out package/front-end/Images/thumbHoverVert.png
+silly tar out package/front-end/Images/thumbVert.png
+silly tar out package/front-end/Images/timelineBarBlue.png
+silly tar out package/front-end/Images/timelineBarGray.png
+silly tar out package/front-end/Images/timelineBarGreen.png
+silly tar out package/front-end/Images/timelineBarOrange.png
+silly tar out package/front-end/Images/timelineBarPurple.png
+silly tar out package/front-end/Images/timelineBarRed.png
+silly tar out package/front-end/Images/timelineBarYellow.png
+silly tar out package/front-end/Images/timelineCheckmarks.png
+silly tar out package/front-end/Images/timelineDots.png
+silly tar out package/front-end/Images/timelineHollowPillBlue.png
+silly tar out package/front-end/Images/timelineHollowPillGray.png
+silly tar out package/front-end/Images/timelineHollowPillGreen.png
+silly tar out package/front-end/Images/timelineHollowPillOrange.png
+silly tar out package/front-end/Images/timelineHollowPillPurple.png
+silly tar out package/front-end/Images/timelineHollowPillRed.png
+silly tar out package/front-end/Images/timelineHollowPillYellow.png
+silly tar out package/front-end/Images/timelineIcon.png
+silly tar out package/front-end/Images/timelinePillBlue.png
+silly tar out package/front-end/Images/timelinePillGray.png
+silly tar out package/front-end/Images/timelinePillGreen.png
+silly tar out package/front-end/Images/timelinePillOrange.png
+silly tar out package/front-end/Images/timelinePillPurple.png
+silly tar out package/front-end/Images/timelinePillRed.png
+silly tar out package/front-end/Images/timelinePillYellow.png
+silly tar out package/front-end/Images/toolbarItemSelected.png
+silly tar out package/front-end/Images/trackHoriz.png
+silly tar out package/front-end/Images/trackVert.png
+silly tar out package/front-end/Images/treeDownTriangleBlack.png
+silly tar out package/front-end/Images/treeDownTriangleWhite.png
+silly tar out package/front-end/Images/treeRightTriangleBlack.png
+silly tar out package/front-end/Images/treeRightTriangleWhite.png
+silly tar out package/front-end/Images/treeUpTriangleBlack.png
+silly tar out package/front-end/Images/treeUpTriangleWhite.png
+silly tar out package/front-end/Images/undockButtonGlyph.png
+silly tar out package/front-end/Images/userInputIcon.png
+silly tar out package/front-end/Images/userInputPreviousIcon.png
+silly tar out package/front-end/Images/userInputResultIcon.png
+silly tar out package/front-end/Images/warningIcon.png
+silly tar out package/front-end/Images/warningMediumIcon.png
+silly tar out package/front-end/Images/warningOrangeDot.png
+silly tar out package/front-end/Images/warningsErrors.png
+silly tar out package/front-end/node/InspectorBackendStub.js
+silly tar out package/front-end/node/InspectorFrontendHostStub.js
+silly tar out package/front-end/node/Overrides.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/readme.md
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/ChangeLog
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/.gitignore
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/config.json
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/test
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/test/hello.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/lib/session.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/lib/debug-server.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/lib/debugger.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/lib/callback.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/bin/inspector.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/StylesSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ShortcutsHelp.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Script.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SummaryBar.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceCSSTokenizer.re2js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/WatchExpressionsSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/NetworkPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/WorkersSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/WelcomeView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ConsolePanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/BreakpointManager.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/CookiesTable.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourceView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/inspector.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ProfileDataGridTree.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/inspector.html
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DatabaseTableView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TextEditorHighlighter.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DOMStorageItemsView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ExtensionCommon.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/popover.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/HAREntry.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/GoToLineDialog.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/InjectedScriptAccess.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/InjectedScript.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourceTimingView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/AuditCategories.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DOMSyntaxHighlighter.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/inspector.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ExtensionAuditCategory.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TopDownProfileDataGridTree.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/HeapSnapshotView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/InjectedFakeWorker.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourceCookiesView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ScriptView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Resource.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Settings.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ExtensionRegistryStub.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Drawer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/AuditLauncherView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/CSSStyleModel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ScopeChainSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ProfileView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourceCategory.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DatabaseQueryView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/RemoteObject.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ContextMenu.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/heapProfiler.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Checkbox.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ImageView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Popover.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DOMAgent.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ConsoleView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Placard.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TextViewer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/EventListenersSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SidebarTreeElement.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/CSSCompletions.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ExtensionAPI.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourceManager.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TestController.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TabbedPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/inspectorSyntaxHighlight.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/audits.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/CookieItemsView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TimelineAgent.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/helpScreen.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TextEditorModel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/MetricsSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TimelineGrid.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceHTMLTokenizer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/AuditFormatters.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/CookieParser.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DOMStorage.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ElementsTreeOutline.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/InspectorFrontendHostStub.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/treeoutline.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TimelinePanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ElementsPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/PropertiesSection.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/KeyboardShortcut.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/FileSystemView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceFrame.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ExtensionServer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/HelpScreen.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/BreakpointsSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/BottomUpProfileDataGridTree.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/AuditResultView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/CallStackSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Color.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/View.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceHTMLTokenizer.re2js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/DataGrid.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ScriptsPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Object.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ProfilesPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/FontView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/index.html
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/WebKit.qrc
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TimelineOverviewPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceJavaScriptTokenizer.re2js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceJavaScriptTokenizer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/NetworkItemView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/goToLineDialog.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/AuditsPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceCSSTokenizer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ChangesView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/AuditRules.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ExtensionPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/networkPanel.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/PropertiesSidebarPane.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Database.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/utilities.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/PanelEnablerView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ApplicationCacheItemsView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Panel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/textViewer.css
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/InspectorBackendStub.qrc
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/SourceTokenizer.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/StatusBarButton.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/TextPrompt.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourceHeadersView.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Callback.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Section.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ResourcesPanel.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/ObjectPropertiesSection.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/node
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/node/InspectorFrontendHostStub.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/node/Overrides.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/node/InspectorBackendStub.js
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarBottomBackground.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/graphLabelCalloutRight.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/back.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/trackVert.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/userInputPreviousIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/errorMediumIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/searchSmallBrightBlue.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/warningMediumIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/debuggerStepOver.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/popoverBackground.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallDown.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/debuggerStepOut.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarBlue.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourceDocumentIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/profilesSilhouette.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/toolbarItemSelected.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/paneGrowHandleLine.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/paneSettingsButtons.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/searchSmallBlue.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/segmentSelectedEnd.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/splitviewDimple.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/spinner.gif
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/radioDot.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/percentButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/breakpointsActivateButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillRed.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/paneBottomGrow.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/nodeSearchButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourcesTimeGraphIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/thumbHoriz.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/forward.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/elementsIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarGray.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarRed.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/errorIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/segment.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/auditsIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/thumbVert.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/enableOutlineButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/segmentHover.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/breakpointCounterBorder.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/gearButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/glossyHeaderSelected.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarGreen.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/breakpointConditionalBorder.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillRed.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallRightDownBlack.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/largerResourcesButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineDots.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/profileSmallIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallRight.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourceJSIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/debuggerContinue.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallRightDown.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/undockButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/errorRedDot.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillBlue.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallRightBlack.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/consoleIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/paneBottomGrowActive.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/breakpointConditionalCounterBorder.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/databaseTable.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/clearConsoleButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourcePlainIconSmall.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarMenuButtonSelected.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/warningOrangeDot.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/localStorage.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/splitviewDividerBackground.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/database.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarPurple.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillYellow.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/thumbHoverVert.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/warningIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/pauseOnExceptionButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/profilesIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillOrange.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/debuggerStepInto.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillGreen.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourceCSSIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/userInputResultIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/successGreenDot.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarResizerVertical.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/recordToggledButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/treeUpTriangleBlack.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/treeRightTriangleBlack.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/goArrow.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/reloadButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/scriptsIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/closeButtons.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/debuggerPause.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourcePlainIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillPurple.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/excludeButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillGray.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineCheckmarks.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/glossyHeader.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/frame.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/thumbActiveHoriz.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/warningsErrors.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/thumbActiveVert.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/enableSolidButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/paneAddButtons.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/searchSmallGray.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/graphLabelCalloutLeft.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/scriptsSilhouette.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourceDocumentIconSmall.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/segmentHoverEnd.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/searchSmallWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/treeDownTriangleWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarMenuButton.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/segmentEnd.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/profileGroupIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/consoleButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourcesIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillGreen.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/popoverArrows.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/thumbHoverHoriz.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillYellow.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/trackHoriz.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/focusButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/checker.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/programCounterBorder.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineHollowPillGray.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/dockButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarResizerHorizontal.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/profileIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallDownBlack.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/cookie.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/glossyHeaderPressed.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarButtons.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/resourcesSizeGraphIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/userInputIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/breakpointsDeactivateButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillOrange.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallDownWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillBlue.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/sessionStorage.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallRightDownWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/statusbarBackground.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelinePillPurple.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/treeRightTriangleWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/treeUpTriangleWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarYellow.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/treeDownTriangleBlack.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/disclosureTriangleSmallRightWhite.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/recordButtonGlyph.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/timelineBarOrange.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/glossyHeaderSelectedPressed.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/breakpointBorder.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/networkIcon.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/applicationCache.png
+silly asyncMap in gTP /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package/front-end/Images/segmentSelected.png
+verbose gunzed /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package
+verbose rm'ed /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package
+verbose renamed [ '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/___package.npm/package',
+verbose renamed   '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package' ]
+silly testEngine { name: 'node-inspector',
+silly testEngine   version: '0.1.10',
+silly testEngine   description: 'Web Inspector based nodeJS debugger',
+silly testEngine   homepage: 'http://github.com/dannycoates/node-inspector',
+silly testEngine   author: 
+silly testEngine    { name: 'Danny Coates',
+silly testEngine      email: 'dannycoates@gmail.com' },
+silly testEngine   keywords: [ 'debug', 'debugger', 'inspector', 'profiler' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dannycoates/node-inspector.git' },
+silly testEngine   engines: { node: '>=0.3.0' },
+silly testEngine   bin: { 'node-inspector': './bin/inspector.js' },
+silly testEngine   dependencies: { 'socket.io': '~0.8.2', paperboy: '~0.0.2' },
+silly testEngine   _id: 'node-inspector@0.1.10',
+silly testEngine   devDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.104',
+silly testEngine   _nodeVersion: 'v0.4.7',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package' }
+verbose caching /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package/package.json
+verbose loadDefaults node-inspector@0.1.10
+verbose tarball contents [ 'package' ]
+verbose from cache /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package/package.json
+verbose pack /tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents/package /home/user/.npm/node-inspector/0.1.10/package.tgz
+verbose mkdir'ed /home/user/.npm/node-inspector/0.1.10
+verbose tar about to write tar and gzip it.
+silly tar args [ '-czvf', '-', '-T', '-' ]
+silly spawning [ 'tar',
+silly spawning   [ '-czvf', '-', '-T', '-' ],
+silly spawning   '/tmp/npm-1321651163004/1321651163004-0.5027258263435215/contents' ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/home/user/.npm/node-inspector/0.1.10/___package.npm'
+verbose mkdir done: /home/user/.npm/node-inspector/0.1.10/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/user/.npm/node-inspector/0.1.10/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly spawning [ 'tar',
+silly spawning   [ '-zmvxpf',
+silly spawning     '/home/user/.npm/node-inspector/0.1.10/package.tgz' ],
+silly spawning   '/home/user/.npm/node-inspector/0.1.10/___package.npm' ]
+silly tar out package/readme.md
+silly tar out package/ChangeLog
+silly tar out package/.gitignore
+silly tar out package/config.json
+silly tar out package/package.json
+silly tar out package/test/hello.js
+silly tar out package/lib/session.js
+silly tar out package/lib/debug-server.js
+silly tar out package/lib/debugger.js
+silly tar out package/lib/callback.js
+silly tar out package/bin/inspector.js
+silly tar out package/front-end/StylesSidebarPane.js
+silly tar out package/front-end/ShortcutsHelp.js
+silly tar out package/front-end/Script.js
+silly tar out package/front-end/SummaryBar.js
+silly tar out package/front-end/SourceCSSTokenizer.re2js
+silly tar out package/front-end/WatchExpressionsSidebarPane.js
+silly tar out package/front-end/NetworkPanel.js
+silly tar out package/front-end/WelcomeView.js
+silly tar out package/front-end/WorkersSidebarPane.js
+silly tar out package/front-end/ConsolePanel.js
+silly tar out package/front-end/BreakpointManager.js
+silly tar out package/front-end/CookiesTable.js
+silly tar out package/front-end/ResourceView.js
+silly tar out package/front-end/inspector.css
+silly tar out package/front-end/ProfileDataGridTree.js
+silly tar out package/front-end/inspector.html
+silly tar out package/front-end/TextEditorHighlighter.js
+silly tar out package/front-end/DatabaseTableView.js
+silly tar out package/front-end/DOMStorageItemsView.js
+silly tar out package/front-end/ExtensionCommon.js
+silly tar out package/front-end/popover.css
+silly tar out package/front-end/HAREntry.js
+silly tar out package/front-end/GoToLineDialog.js
+silly tar out package/front-end/InjectedScriptAccess.js
+silly tar out package/front-end/InjectedScript.js
+silly tar out package/front-end/ResourceTimingView.js
+silly tar out package/front-end/AuditCategories.js
+silly tar out package/front-end/DOMSyntaxHighlighter.js
+silly tar out package/front-end/inspector.js
+silly tar out package/front-end/ExtensionAuditCategory.js
+silly tar out package/front-end/TopDownProfileDataGridTree.js
+silly tar out package/front-end/HeapSnapshotView.js
+silly tar out package/front-end/InjectedFakeWorker.js
+silly tar out package/front-end/ResourceCookiesView.js
+silly tar out package/front-end/ScriptView.js
+silly tar out package/front-end/SourceView.js
+silly tar out package/front-end/Resource.js
+silly tar out package/front-end/Settings.js
+silly tar out package/front-end/ExtensionRegistryStub.js
+silly tar out package/front-end/Drawer.js
+silly tar out package/front-end/AuditLauncherView.js
+silly tar out package/front-end/CSSStyleModel.js
+silly tar out package/front-end/ScopeChainSidebarPane.js
+silly tar out package/front-end/ProfileView.js
+silly tar out package/front-end/ResourceCategory.js
+silly tar out package/front-end/DatabaseQueryView.js
+silly tar out package/front-end/RemoteObject.js
+silly tar out package/front-end/ContextMenu.js
+silly tar out package/front-end/heapProfiler.css
+silly tar out package/front-end/Checkbox.js
+silly tar out package/front-end/ImageView.js
+silly tar out package/front-end/Popover.js
+silly tar out package/front-end/DOMAgent.js
+silly tar out package/front-end/ConsoleView.js
+silly tar out package/front-end/Placard.js
+silly tar out package/front-end/TextViewer.js
+silly tar out package/front-end/EventListenersSidebarPane.js
+silly tar out package/front-end/SidebarTreeElement.js
+silly tar out package/front-end/CSSCompletions.js
+silly tar out package/front-end/ExtensionAPI.js
+silly tar out package/front-end/ResourceManager.js
+silly tar out package/front-end/TestController.js
+silly tar out package/front-end/TabbedPane.js
+silly tar out package/front-end/inspectorSyntaxHighlight.css
+silly tar out package/front-end/audits.css
+silly tar out package/front-end/CookieItemsView.js
+silly tar out package/front-end/TimelineAgent.js
+silly tar out package/front-end/helpScreen.css
+silly tar out package/front-end/TextEditorModel.js
+silly tar out package/front-end/MetricsSidebarPane.js
+silly tar out package/front-end/TimelineGrid.js
+silly tar out package/front-end/SourceHTMLTokenizer.js
+silly tar out package/front-end/AuditFormatters.js
+silly tar out package/front-end/CookieParser.js
+silly tar out package/front-end/DOMStorage.js
+silly tar out package/front-end/ElementsTreeOutline.js
+silly tar out package/front-end/treeoutline.js
+silly tar out package/front-end/InspectorFrontendHostStub.js
+silly tar out package/front-end/TimelinePanel.js
+silly tar out package/front-end/ElementsPanel.js
+silly tar out package/front-end/PropertiesSection.js
+silly tar out package/front-end/KeyboardShortcut.js
+silly tar out package/front-end/FileSystemView.js
+silly tar out package/front-end/SourceFrame.js
+silly tar out package/front-end/ExtensionServer.js
+silly tar out package/front-end/HelpScreen.js
+silly tar out package/front-end/BreakpointsSidebarPane.js
+silly tar out package/front-end/BottomUpProfileDataGridTree.js
+silly tar out package/front-end/AuditResultView.js
+silly tar out package/front-end/CallStackSidebarPane.js
+silly tar out package/front-end/Color.js
+silly tar out package/front-end/View.js
+silly tar out package/front-end/SourceHTMLTokenizer.re2js
+silly tar out package/front-end/DataGrid.js
+silly tar out package/front-end/ScriptsPanel.js
+silly tar out package/front-end/Object.js
+silly tar out package/front-end/SidebarPane.js
+silly tar out package/front-end/ProfilesPanel.js
+silly tar out package/front-end/FontView.js
+silly tar out package/front-end/TimelineOverviewPane.js
+silly tar out package/front-end/index.html
+silly tar out package/front-end/WebKit.qrc
+silly tar out package/front-end/SourceJavaScriptTokenizer.re2js
+silly tar out package/front-end/SourceJavaScriptTokenizer.js
+silly tar out package/front-end/NetworkItemView.js
+silly tar out package/front-end/goToLineDialog.css
+silly tar out package/front-end/AuditsPanel.js
+silly tar out package/front-end/ChangesView.js
+silly tar out package/front-end/SourceCSSTokenizer.js
+silly tar out package/front-end/AuditRules.js
+silly tar out package/front-end/ExtensionPanel.js
+silly tar out package/front-end/networkPanel.css
+silly tar out package/front-end/PropertiesSidebarPane.js
+silly tar out package/front-end/Database.js
+silly tar out package/front-end/utilities.js
+silly tar out package/front-end/PanelEnablerView.js
+silly tar out package/front-end/ApplicationCacheItemsView.js
+silly tar out package/front-end/Panel.js
+silly tar out package/front-end/textViewer.css
+silly tar out package/front-end/InspectorBackendStub.qrc
+silly tar out package/front-end/SourceTokenizer.js
+silly tar out package/front-end/StatusBarButton.js
+silly tar out package/front-end/TextPrompt.js
+silly tar out package/front-end/ResourceHeadersView.js
+silly tar out package/front-end/Callback.js
+silly tar out package/front-end/Section.js
+silly tar out package/front-end/ResourcesPanel.js
+silly tar out package/front-end/ObjectPropertiesSection.js
+silly tar out package/front-end/node/InspectorFrontendHostStub.js
+silly tar out package/front-end/node/Overrides.js
+silly tar out package/front-end/node/InspectorBackendStub.js
+silly tar out package/front-end/Images/statusbarBottomBackground.png
+silly tar out package/front-end/Images/graphLabelCalloutRight.png
+silly tar out package/front-end/Images/back.png
+silly tar out package/front-end/Images/trackVert.png
+silly tar out package/front-end/Images/userInputPreviousIcon.png
+silly tar out package/front-end/Images/errorMediumIcon.png
+silly tar out package/front-end/Images/searchSmallBrightBlue.png
+silly tar out package/front-end/Images/warningMediumIcon.png
+silly tar out package/front-end/Images/debuggerStepOver.png
+silly tar out package/front-end/Images/popoverBackground.png
+silly tar out package/front-end/Images/disclosureTriangleSmallDown.png
+silly tar out package/front-end/Images/debuggerStepOut.png
+silly tar out package/front-end/Images/timelineBarBlue.png
+silly tar out package/front-end/Images/resourceDocumentIcon.png
+silly tar out package/front-end/Images/profilesSilhouette.png
+silly tar out package/front-end/Images/toolbarItemSelected.png
+silly tar out package/front-end/Images/paneGrowHandleLine.png
+silly tar out package/front-end/Images/paneSettingsButtons.png
+silly tar out package/front-end/Images/searchSmallBlue.png
+silly tar out package/front-end/Images/segmentSelectedEnd.png
+silly tar out package/front-end/Images/splitviewDimple.png
+silly tar out package/front-end/Images/spinner.gif
+silly tar out package/front-end/Images/radioDot.png
+silly tar out package/front-end/Images/percentButtonGlyph.png
+silly tar out package/front-end/Images/breakpointsActivateButtonGlyph.png
+silly tar out package/front-end/Images/timelineHollowPillRed.png
+silly tar out package/front-end/Images/paneBottomGrow.png
+silly tar out package/front-end/Images/nodeSearchButtonGlyph.png
+silly tar out package/front-end/Images/timelineIcon.png
+silly tar out package/front-end/Images/resourcesTimeGraphIcon.png
+silly tar out package/front-end/Images/thumbHoriz.png
+silly tar out package/front-end/Images/forward.png
+silly tar out package/front-end/Images/elementsIcon.png
+silly tar out package/front-end/Images/timelineBarGray.png
+silly tar out package/front-end/Images/timelineBarRed.png
+silly tar out package/front-end/Images/errorIcon.png
+silly tar out package/front-end/Images/segment.png
+silly tar out package/front-end/Images/auditsIcon.png
+silly tar out package/front-end/Images/thumbVert.png
+silly tar out package/front-end/Images/enableOutlineButtonGlyph.png
+silly tar out package/front-end/Images/segmentHover.png
+silly tar out package/front-end/Images/breakpointCounterBorder.png
+silly tar out package/front-end/Images/gearButtonGlyph.png
+silly tar out package/front-end/Images/glossyHeaderSelected.png
+silly tar out package/front-end/Images/timelineBarGreen.png
+silly tar out package/front-end/Images/breakpointConditionalBorder.png
+silly tar out package/front-end/Images/timelinePillRed.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightDownBlack.png
+silly tar out package/front-end/Images/largerResourcesButtonGlyph.png
+silly tar out package/front-end/Images/timelineDots.png
+silly tar out package/front-end/Images/profileSmallIcon.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRight.png
+silly tar out package/front-end/Images/resourceJSIcon.png
+silly tar out package/front-end/Images/debuggerContinue.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightDown.png
+silly tar out package/front-end/Images/undockButtonGlyph.png
+silly tar out package/front-end/Images/errorRedDot.png
+silly tar out package/front-end/Images/timelineHollowPillBlue.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightBlack.png
+silly tar out package/front-end/Images/consoleIcon.png
+silly tar out package/front-end/Images/paneBottomGrowActive.png
+silly tar out package/front-end/Images/breakpointConditionalCounterBorder.png
+silly tar out package/front-end/Images/databaseTable.png
+silly tar out package/front-end/Images/clearConsoleButtonGlyph.png
+silly tar out package/front-end/Images/resourcePlainIconSmall.png
+silly tar out package/front-end/Images/statusbarMenuButtonSelected.png
+silly tar out package/front-end/Images/warningOrangeDot.png
+silly tar out package/front-end/Images/localStorage.png
+silly tar out package/front-end/Images/splitviewDividerBackground.png
+silly tar out package/front-end/Images/database.png
+silly tar out package/front-end/Images/timelineBarPurple.png
+silly tar out package/front-end/Images/timelineHollowPillYellow.png
+silly tar out package/front-end/Images/thumbHoverVert.png
+silly tar out package/front-end/Images/warningIcon.png
+silly tar out package/front-end/Images/pauseOnExceptionButtonGlyph.png
+silly tar out package/front-end/Images/profilesIcon.png
+silly tar out package/front-end/Images/timelineHollowPillOrange.png
+silly tar out package/front-end/Images/debuggerStepInto.png
+silly tar out package/front-end/Images/timelinePillGreen.png
+silly tar out package/front-end/Images/resourceCSSIcon.png
+silly tar out package/front-end/Images/userInputResultIcon.png
+silly tar out package/front-end/Images/successGreenDot.png
+silly tar out package/front-end/Images/statusbarResizerVertical.png
+silly tar out package/front-end/Images/recordToggledButtonGlyph.png
+silly tar out package/front-end/Images/treeUpTriangleBlack.png
+silly tar out package/front-end/Images/treeRightTriangleBlack.png
+silly tar out package/front-end/Images/goArrow.png
+silly tar out package/front-end/Images/reloadButtonGlyph.png
+silly tar out package/front-end/Images/scriptsIcon.png
+silly tar out package/front-end/Images/closeButtons.png
+silly tar out package/front-end/Images/debuggerPause.png
+silly tar out package/front-end/Images/resourcePlainIcon.png
+silly tar out package/front-end/Images/timelineHollowPillPurple.png
+silly tar out package/front-end/Images/excludeButtonGlyph.png
+silly tar out package/front-end/Images/timelinePillGray.png
+silly tar out package/front-end/Images/timelineCheckmarks.png
+silly tar out package/front-end/Images/glossyHeader.png
+silly tar out package/front-end/Images/frame.png
+silly tar out package/front-end/Images/thumbActiveHoriz.png
+silly tar out package/front-end/Images/warningsErrors.png
+silly tar out package/front-end/Images/thumbActiveVert.png
+silly tar out package/front-end/Images/enableSolidButtonGlyph.png
+silly tar out package/front-end/Images/paneAddButtons.png
+silly tar out package/front-end/Images/searchSmallGray.png
+silly tar out package/front-end/Images/graphLabelCalloutLeft.png
+silly tar out package/front-end/Images/scriptsSilhouette.png
+silly tar out package/front-end/Images/resourceDocumentIconSmall.png
+silly tar out package/front-end/Images/segmentHoverEnd.png
+silly tar out package/front-end/Images/searchSmallWhite.png
+silly tar out package/front-end/Images/treeDownTriangleWhite.png
+silly tar out package/front-end/Images/statusbarMenuButton.png
+silly tar out package/front-end/Images/segmentEnd.png
+silly tar out package/front-end/Images/profileGroupIcon.png
+silly tar out package/front-end/Images/consoleButtonGlyph.png
+silly tar out package/front-end/Images/resourcesIcon.png
+silly tar out package/front-end/Images/timelineHollowPillGreen.png
+silly tar out package/front-end/Images/popoverArrows.png
+silly tar out package/front-end/Images/thumbHoverHoriz.png
+silly tar out package/front-end/Images/timelinePillYellow.png
+silly tar out package/front-end/Images/trackHoriz.png
+silly tar out package/front-end/Images/focusButtonGlyph.png
+silly tar out package/front-end/Images/checker.png
+silly tar out package/front-end/Images/programCounterBorder.png
+silly tar out package/front-end/Images/timelineHollowPillGray.png
+silly tar out package/front-end/Images/dockButtonGlyph.png
+silly tar out package/front-end/Images/statusbarResizerHorizontal.png
+silly tar out package/front-end/Images/profileIcon.png
+silly tar out package/front-end/Images/disclosureTriangleSmallDownBlack.png
+silly tar out package/front-end/Images/cookie.png
+silly tar out package/front-end/Images/glossyHeaderPressed.png
+silly tar out package/front-end/Images/statusbarButtons.png
+silly tar out package/front-end/Images/resourcesSizeGraphIcon.png
+silly tar out package/front-end/Images/userInputIcon.png
+silly tar out package/front-end/Images/breakpointsDeactivateButtonGlyph.png
+silly tar out package/front-end/Images/timelinePillOrange.png
+silly tar out package/front-end/Images/disclosureTriangleSmallDownWhite.png
+silly tar out package/front-end/Images/timelinePillBlue.png
+silly tar out package/front-end/Images/sessionStorage.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightDownWhite.png
+silly tar out package/front-end/Images/statusbarBackground.png
+silly tar out package/front-end/Images/timelinePillPurple.png
+silly tar out package/front-end/Images/treeRightTriangleWhite.png
+silly tar out package/front-end/Images/treeUpTriangleWhite.png
+silly tar out package/front-end/Images/timelineBarYellow.png
+silly tar out package/front-end/Images/treeDownTriangleBlack.png
+silly tar out package/front-end/Images/disclosureTriangleSmallRightWhite.png
+silly tar out package/front-end/Images/recordButtonGlyph.png
+silly tar out package/front-end/Images/timelineBarOrange.png
+silly tar out package/front-end/Images/glossyHeaderSelectedPressed.png
+silly tar out package/front-end/Images/breakpointBorder.png
+silly tar out package/front-end/Images/networkIcon.png
+silly tar out package/front-end/Images/applicationCache.png
+silly tar out package/front-end/Images/segmentSelected.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/readme.md
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/ChangeLog
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/.gitignore
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/package.json
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/config.json
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/test
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/test/hello.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/lib
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/lib/session.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/lib/debug-server.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/lib/debugger.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/lib/callback.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/bin
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/bin/inspector.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/StylesSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ShortcutsHelp.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Script.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SummaryBar.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceCSSTokenizer.re2js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/WatchExpressionsSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/NetworkPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/WorkersSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/WelcomeView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ConsolePanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/BreakpointManager.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/CookiesTable.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourceView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/inspector.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ProfileDataGridTree.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/inspector.html
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TextEditorHighlighter.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DatabaseTableView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DOMStorageItemsView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ExtensionCommon.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/popover.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/HAREntry.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/GoToLineDialog.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/InjectedScriptAccess.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/InjectedScript.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourceTimingView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/AuditCategories.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DOMSyntaxHighlighter.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/inspector.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ExtensionAuditCategory.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TopDownProfileDataGridTree.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/HeapSnapshotView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/InjectedFakeWorker.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourceCookiesView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ScriptView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Resource.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Settings.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ExtensionRegistryStub.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Drawer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/AuditLauncherView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/CSSStyleModel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ScopeChainSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ProfileView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourceCategory.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DatabaseQueryView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/RemoteObject.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ContextMenu.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/heapProfiler.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Checkbox.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ImageView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Popover.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DOMAgent.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ConsoleView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Placard.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TextViewer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/EventListenersSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SidebarTreeElement.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/CSSCompletions.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ExtensionAPI.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourceManager.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TestController.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TabbedPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/inspectorSyntaxHighlight.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/audits.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/CookieItemsView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TimelineAgent.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/helpScreen.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TextEditorModel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/MetricsSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TimelineGrid.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceHTMLTokenizer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/AuditFormatters.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/CookieParser.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DOMStorage.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ElementsTreeOutline.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/treeoutline.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/InspectorFrontendHostStub.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TimelinePanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ElementsPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/PropertiesSection.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/KeyboardShortcut.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/FileSystemView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceFrame.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ExtensionServer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/HelpScreen.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/BreakpointsSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/BottomUpProfileDataGridTree.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/AuditResultView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/CallStackSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Color.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/View.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceHTMLTokenizer.re2js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/DataGrid.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ScriptsPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Object.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ProfilesPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/FontView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/index.html
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TimelineOverviewPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/WebKit.qrc
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceJavaScriptTokenizer.re2js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceJavaScriptTokenizer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/NetworkItemView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/goToLineDialog.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/AuditsPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ChangesView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceCSSTokenizer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/AuditRules.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ExtensionPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/networkPanel.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/PropertiesSidebarPane.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Database.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/utilities.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/PanelEnablerView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ApplicationCacheItemsView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Panel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/textViewer.css
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/InspectorBackendStub.qrc
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/SourceTokenizer.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/StatusBarButton.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/TextPrompt.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourceHeadersView.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Callback.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Section.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ResourcesPanel.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/ObjectPropertiesSection.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/node
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/node/InspectorFrontendHostStub.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/node/Overrides.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/node/InspectorBackendStub.js
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarBottomBackground.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/graphLabelCalloutRight.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/back.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/trackVert.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/userInputPreviousIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/errorMediumIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/searchSmallBrightBlue.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/warningMediumIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/debuggerStepOver.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/popoverBackground.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallDown.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/debuggerStepOut.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarBlue.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourceDocumentIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/profilesSilhouette.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/toolbarItemSelected.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/paneGrowHandleLine.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/paneSettingsButtons.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/searchSmallBlue.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/segmentSelectedEnd.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/splitviewDimple.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/spinner.gif
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/radioDot.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/percentButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/breakpointsActivateButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillRed.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/paneBottomGrow.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/nodeSearchButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourcesTimeGraphIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/thumbHoriz.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/forward.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/elementsIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarGray.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarRed.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/errorIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/segment.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/auditsIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/thumbVert.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/enableOutlineButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/segmentHover.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/breakpointCounterBorder.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/gearButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/glossyHeaderSelected.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarGreen.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/breakpointConditionalBorder.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillRed.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallRightDownBlack.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/largerResourcesButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineDots.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/profileSmallIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallRight.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourceJSIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/debuggerContinue.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallRightDown.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/undockButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/errorRedDot.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillBlue.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallRightBlack.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/consoleIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/paneBottomGrowActive.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/breakpointConditionalCounterBorder.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/databaseTable.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/clearConsoleButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourcePlainIconSmall.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarMenuButtonSelected.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/warningOrangeDot.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/localStorage.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/splitviewDividerBackground.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/database.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarPurple.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillYellow.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/thumbHoverVert.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/warningIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/pauseOnExceptionButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/profilesIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillOrange.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/debuggerStepInto.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillGreen.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourceCSSIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/userInputResultIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/successGreenDot.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarResizerVertical.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/recordToggledButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/treeUpTriangleBlack.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/treeRightTriangleBlack.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/goArrow.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/reloadButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/scriptsIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/closeButtons.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/debuggerPause.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourcePlainIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillPurple.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/excludeButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillGray.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineCheckmarks.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/glossyHeader.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/frame.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/thumbActiveHoriz.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/warningsErrors.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/thumbActiveVert.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/enableSolidButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/paneAddButtons.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/searchSmallGray.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/graphLabelCalloutLeft.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/scriptsSilhouette.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourceDocumentIconSmall.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/segmentHoverEnd.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/searchSmallWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/treeDownTriangleWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarMenuButton.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/segmentEnd.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/profileGroupIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/consoleButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourcesIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillGreen.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/popoverArrows.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/thumbHoverHoriz.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillYellow.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/trackHoriz.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/focusButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/checker.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/programCounterBorder.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineHollowPillGray.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/dockButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarResizerHorizontal.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/profileIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallDownBlack.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/cookie.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/glossyHeaderPressed.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarButtons.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/resourcesSizeGraphIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/userInputIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/breakpointsDeactivateButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillOrange.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallDownWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillBlue.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/sessionStorage.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallRightDownWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/statusbarBackground.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelinePillPurple.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/treeRightTriangleWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/treeUpTriangleWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarYellow.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/treeDownTriangleBlack.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/disclosureTriangleSmallRightWhite.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/recordButtonGlyph.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/timelineBarOrange.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/glossyHeaderSelectedPressed.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/breakpointBorder.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/networkIcon.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/applicationCache.png
+silly asyncMap in gTP /home/user/.npm/node-inspector/0.1.10/___package.npm/package/front-end/Images/segmentSelected.png
+verbose gunzed /home/user/.npm/node-inspector/0.1.10/___package.npm/package
+verbose rm'ed /home/user/.npm/node-inspector/0.1.10/package
+verbose renamed [ '/home/user/.npm/node-inspector/0.1.10/___package.npm/package',
+verbose renamed   '/home/user/.npm/node-inspector/0.1.10/package' ]
+silly testEngine { name: 'node-inspector',
+silly testEngine   version: '0.1.10',
+silly testEngine   description: 'Web Inspector based nodeJS debugger',
+silly testEngine   homepage: 'http://github.com/dannycoates/node-inspector',
+silly testEngine   author: 
+silly testEngine    { name: 'Danny Coates',
+silly testEngine      email: 'dannycoates@gmail.com' },
+silly testEngine   keywords: [ 'debug', 'debugger', 'inspector', 'profiler' ],
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/dannycoates/node-inspector.git' },
+silly testEngine   engines: { node: '>=0.3.0' },
+silly testEngine   bin: { 'node-inspector': './bin/inspector.js' },
+silly testEngine   dependencies: { 'socket.io': '~0.8.2', paperboy: '~0.0.2' },
+silly testEngine   _id: 'node-inspector@0.1.10',
+silly testEngine   devDependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.104',
+silly testEngine   _nodeVersion: 'v0.4.7',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'cb794112418e6c644e65e79922278e95b85db507' } }
+verbose caching /home/user/.npm/node-inspector/0.1.10/package/package.json
+verbose loadDefaults node-inspector@0.1.10
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 32918
+info shasum cb794112418e6c644e65e79922278e95b85db507
+info shasum /home/user/.npm/node-inspector/0.1.10/package.tgz
+verbose from cache /home/user/.npm/node-inspector/0.1.10/package/package.json
+verbose chmod /home/user/.npm/node-inspector/0.1.10/package.tgz 644
+verbose chown [ '/home/user/.npm/node-inspector/0.1.10/package.tgz',
+verbose chown   1000,
+verbose chown   1000 ]
+silly resolved [ { name: 'node-inspector',
+silly resolved     version: '0.1.10',
+silly resolved     description: 'Web Inspector based nodeJS debugger',
+silly resolved     homepage: 'http://github.com/dannycoates/node-inspector',
+silly resolved     author: 
+silly resolved      { name: 'Danny Coates',
+silly resolved        email: 'dannycoates@gmail.com' },
+silly resolved     keywords: [ 'debug', 'debugger', 'inspector', 'profiler' ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/dannycoates/node-inspector.git' },
+silly resolved     engines: { node: '>=0.3.0' },
+silly resolved     bin: { 'node-inspector': './bin/inspector.js' },
+silly resolved     dependencies: { 'socket.io': '~0.8.2', paperboy: '~0.0.2' },
+silly resolved     _id: 'node-inspector@0.1.10',
+silly resolved     devDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.0.104',
+silly resolved     _nodeVersion: 'v0.4.7',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'cb794112418e6c644e65e79922278e95b85db507' } } ]
+info into /usr/local/lib node-inspector@0.1.10
+info installOne node-inspector@0.1.10
+info unbuild /usr/local/lib/node_modules/node-inspector
+verbose from cache /home/user/.npm/node-inspector/0.1.10/package/package.json
+verbose mkdir (expected) error ENOENT, No such file or directory '/usr/local/lib/node_modules'
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/node-inspector
+ERR! Could not create /usr/local/lib/node_modules/___node-inspector.npm
+ERR! error installing node-inspector@0.1.10 Error: EACCES, Permission denied '/usr/local/lib/node_modules'
+info unbuild /usr/local/lib/node_modules/node-inspector
+verbose installOne cb node-inspector@0.1.10
+ERR! Error: EACCES, Permission denied '/usr/local/lib/node_modules'
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Linux 2.6.38-8-generic
+ERR! command "node" "/usr/bin/npm" "install" "-g" "node-inspector"
+ERR! cwd /home/user/work/yahoo-bot
+ERR! node -v v0.4.7
+ERR! npm -v 1.0.104
+ERR! path /usr/local/lib/node_modules
+ERR! code EACCES
+verbose exit [ 1, true ]

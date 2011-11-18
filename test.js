@@ -1,17 +1,22 @@
 var yahoo = require('./yahoo.js');
 var parser = require('./parser.js');
 var fs = require('fs');
-var rest = require('restler');
+var messager = require('./message.js');
 
-rest.get('http://www.google.com').on('complete', function(data){
-    console.log(data);
+
+fs.readdir('./rules', function(err, files) {
+	for(var i in files) {
+		var rule = require('./rules/' + files[i]);
+		rule.applyRule(parser, yahoo);
+	}
 });
 
 
-yahoo.setCallback(function(message) {
-   if (message.message) {
-           console.log(message.message.sender + ': ' + message.message.msg);
-           parser.parse(message.message.msg);
+yahoo.setCallback(function(_message) {
+   if (_message.message) {
+           //console.log(message.message.sender + ': ' + message.message.msg);
+	   var _messager = messager.createUser(_message.message.sender, yahoo);
+           parser.parse(_messager, _message.message.msg);
         }
 });
 yahoo.login();
