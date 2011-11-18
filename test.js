@@ -14,7 +14,7 @@ fs.readdir('./rules', function(err, files) {
 
 yahoo.setCallback(function(_message) {
    if (_message.message) {
-           //console.log(message.message.sender + ': ' + message.message.msg);
+           console.log(_message.message.sender + ': ' + _message.message.msg);
 	   var _messager = messager.createUser(_message.message.sender, yahoo);
            parser.parse(_messager, _message.message.msg);
         }
