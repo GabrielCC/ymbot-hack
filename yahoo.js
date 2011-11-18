@@ -1,11 +1,17 @@
 // trebe schimbat userul,
 // parola si numele friendului
-
 var hash = require('./md5.js');
 var querystring = require('querystring');
 var rest = require('restler');
 
 
+var yahoo_bot = {
+    callback: function(message) {
+        if (message.message) {
+           console.log(message.message.sender + ': ' + message.message.msg);
+        }
+    }
+};
 
 var yahoo_user = {
     username: 'gabrielassistant',
@@ -94,10 +100,7 @@ function parseResponseMessage(data) {
         var individual_response;
         for (var i in response.responses) {
             individual_response = eval(response.responses[i]);
-            if(individual_response.buddyInfo != undefined) {
-                continue;
-            }
-            console.log(individual_response.message.sender + ': ' + individual_response.message.msg );
+            yahoo_bot.callback(individual_response);
         }
     }
 }
@@ -136,7 +139,7 @@ function getJsonHeader() {
 function sendPm(user, message) {
     var session_id = yahoo_user.sessionID;
     var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + user + '?sid=' + session_id;
-    
+
     url = generateCompleteUrl(url);
     error_flag = false;
     var smessage = '{"message" : \"' + message + '\"}';
@@ -191,7 +194,7 @@ function signIn(data) {
     }).on('error', errorCallback);
 }
 
-function login()  {
+function login() {
     rest.get(yahoo_api.login).on('success', function(data) {
         if (!error_flag) {
             yahoo_user.requestToken = data.replace('RequestToken=', '').replace('\n', '');
@@ -216,3 +219,11 @@ exports.login = function() {
 exports.sendMessage = function(user, message) {
     sendPm(user, message);
 };
+
+/**
+ * Set the required callback
+ * 
+ */
+ exports.setCallback = function(_function) {
+    yahoo_bot.callback = _function;
+ }
