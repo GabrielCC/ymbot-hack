@@ -139,34 +139,22 @@ function sendPm(user, message) {
     
     url = generateCompleteUrl(url);
     error_flag = false;
-    var smessage = '{"message" : message}';
-    smessage = {
-        "message" : message
-    };
+    var smessage = '{"message" : \"' + message + '\"}';
+    console.log(smessage);
     rest.post(url, {
         headers: getJsonHeader(),
         data: smessage
-    }).on('success', function(data) {
+    }).on('complete', function(data) {
         if (!error_flag) {
-            
+            console.log(data);
         }
     }).on('error', errorCallback);
 
 }
 
 function errorCallback(data) {
-    console.log(data);
-    error_flag = true;
-    var error_data = querystring.parse(data, '\n', '=');
-    if (error_data['CaptchaUrl']) {
-        console.log(error_data['ErrorDescription']);
-        captchadata = error_data['CaptchaData'];
-        console.log(error_data['CaptchaUrl']);
-        readCaptchaWord();
-    }
-    else {
-        console.log(data);
-    }
+    console.log('there was an error');
+    //console.log('data');
 }
 var error_flag = false;
 
@@ -195,7 +183,9 @@ function signIn(data) {
         headers: header,
         data: presence
     }).on('complete', function(data) {
+        console.log('sign in complete');
         yahoo_user.auth_user_data = eval(data);
+        setSessionIdFromData(data);
         sendPm(yahoo_user.admin, "Hello from NodeJS land");
         get_messages_interval = setInterval(getMessages, 5000);
     }).on('error', errorCallback);
@@ -210,36 +200,7 @@ function login()  {
     }).on('error', errorCallback);
 }
 
-var stdin = process.openStdin(),
-    stdio = process.binding("stdio");
 
-function sendCaptcha() {
-    var login_captcha = 'https://login.yahoo.com/WSLogin/V1/get_auth_token?&login=' + yahoo_user.username + '&passwd=' + yahoo_user.password + '&oauth_consumer_key=' + yahoo_key + '&captchadata=' + captchadata + '&captchaword=' + captchaword;
-    error_flag = false;
-    console.log(login_captcha);
-    rest.get(login_captcha).on('complete', function(data) {
-        if (!error_flag) {
-            yahoo_user.requestToken = data.replace('RequestToken=', '').replace('\n', '');
-            //console.log(yahoo_user.requestToken);
-            oauthCredentials();
-        }
-    }).on('error', errorCallback);
-}
-
-function readCaptchaWord() {
-    captchaword = '';
-    stdin.on('keypress', function(chunk, key) {
-        if (!captchaword) {
-            captchaword = chunk;
-        }
-        else captchaword += chunk;
-        if (chunk == '\n') {
-            stdin.removeAllListeners('keypress')
-            sendCaptcha();
-            return;
-        }
-    });
-}
 
 
 //exports functionality
@@ -253,5 +214,5 @@ exports.login = function() {
  *
  */
 exports.sendMessage = function(user, message) {
-    sendPm(user, messenger);
+    sendPm(user, message);
 };
