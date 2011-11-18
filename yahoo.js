@@ -1,9 +1,16 @@
 // trebe schimbat userul,
 // parola si numele friendului
+
+var hash = require('./md5.js');
+var querystring = require('querystring');
+var rest = require('restler');
+
+
+
 var yahoo_user = {
     username: 'gabrielassistant',
     password: 'qwaszx110887',
-    friend: 'gabriel_croitoru11',
+    admin: 'gabriel_croitoru11',
     requestToken: false,
     request_params: false,
     sessionID: false,
@@ -13,8 +20,7 @@ var yahoo_user = {
 };
 var TOTAL_GET_MESSAGES = 1000;
 var presence = '{ }';
-var yahoo_key = 'dj0yJmk9d2ozTWlnQXJINzVGJmQ9WVdrOVltTmlaMWhrTm1jbWNHbzlNVGczT1RrMk1nLS0mcz1jb25zdW1lcnNlY3JldCZ4PTJh';
-yahoo_key = 'dj0yJmk9c3hOWTNJTnBVbE1UJmQ9WVdrOVltTmlaMWhrTm1jbWNHbzlNVGczT1RrMk1nLS0mcz1jb25zdW1lcnNlY3JldCZ4PTg2';
+var yahoo_key = 'dj0yJmk9c3hOWTNJTnBVbE1UJmQ9WVdrOVltTmlaMWhrTm1jbWNHbzlNVGczT1RrMk1nLS0mcz1jb25zdW1lcnNlY3JldCZ4PTg2';
 var yahoo_secret = 'ba2d284216099caa121c1babfbd6e35437a74760';
 
 var captchadata = false;
@@ -34,14 +40,12 @@ if (captchaword) {
     yahoo_api.login = yahoo_api.login_captcha;
 }
 
-var hash = require('./md5.js');
-var querystring = require('querystring');
-var rest = require('restler');
 
 function randomString(time) {
     var str = time + Math.floor(Math.random() * 1000);
     return hash.md5(str).substr(0, 13);
 }
+
 var time = new Date().getTime() / 1000;
 time = Math.floor(time);
 var oauth_nonce_value = randomString(time);
@@ -56,7 +60,6 @@ function oauthCredentials() {
     url += '&oauth_token=' + (yahoo_user.requestToken);
     url += '&oauth_version=1.0';
     rest.get(url).on('success', function(data) {
-        console.log(data);
         signIn(data);
     }).on('error', errorCallback);
 }
@@ -64,6 +67,7 @@ function oauthCredentials() {
 var messages_count = 1;
 var get_messages_interval;
 var start_notifications = -1;
+
 function getMessages() {
     messages_count += 1;
     if (messages_count == TOTAL_GET_MESSAGES) {
@@ -98,11 +102,10 @@ function parseResponseMessage(data) {
     }
 }
 
-function getSessionIdFromData(data) {
+function setSessionIdFromData(data) {
     var params = eval(data);
     var session_id = params.sessionId;
     yahoo_user.sessionID = session_id;
-    return session_id;
 }
 
 function generateCompleteUrl(url) {
@@ -127,9 +130,9 @@ function getJsonHeader() {
     return header;
 }
 
-function sendPm(data) {
-    var session_id = getSessionIdFromData(data);
-    var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + yahoo_user.friend + '?sid=' + session_id;
+function sendPm(user, message) {
+    var session_id = yahoo_user.sessionID;
+    var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + yahoo_user.user + '?sid=' + session_id;
     var time = Math.floor(new Date().getTime() / 1000);
     yahoo_user.oauth_signature = yahoo_secret + '%26' + yahoo_user.request_params.oauth_token_secret;
     yahoo_user.oauth_token = yahoo_user.request_params.oauth_token;
@@ -137,7 +140,10 @@ function sendPm(data) {
 
 
     error_flag = false;
-    var smessage = '{"message" : "Hello from nodejs land"}';
+    var smessage = '{"message" : message}';
+    smessage = {
+        "message" : message
+    };
     rest.post(url, {
         headers: getJsonHeader(),
         data: smessage
@@ -195,12 +201,14 @@ function signIn(data) {
     }).on('error', errorCallback);
 }
 
-rest.get(yahoo_api.login).on('success', function(data) {
-    if (!error_flag) {
-        yahoo_user.requestToken = data.replace('RequestToken=', '').replace('\n', '');
-        oauthCredentials();
-    }
-}).on('error', errorCallback);
+function login()  {
+    rest.get(yahoo_api.login).on('success', function(data) {
+        if (!error_flag) {
+            yahoo_user.requestToken = data.replace('RequestToken=', '').replace('\n', '');
+            oauthCredentials();
+        }
+    }).on('error', errorCallback);
+}
 
 var stdin = process.openStdin(),
     stdio = process.binding("stdio");
@@ -231,4 +239,14 @@ function readCaptchaWord() {
             return;
         }
     });
+}
+
+
+//exports functionality
+exports.login = function() {
+    login();
+}
+
+exports.sendMessage(user, message) {
+    sendPm(user, messenger);
 }
