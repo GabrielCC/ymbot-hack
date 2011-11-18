@@ -22,7 +22,9 @@ var yahoo_api = {
     notification_server: 'http://rproxy1.messenger.yahooapis.com/',
     contacts: 'v1/session?fieldsBuddyList=%2Bgroups',
     presence: 'v1/presence?sid=',
-    sessionID : false
+    sessionID: false,
+    oauth_token: false,
+    oauth_signature: false
 }
 
 if (captchaword) {
@@ -60,6 +62,7 @@ function getMessages(data) {
 
     var session_id = yahoo_user.sessionID;
     var url = yahoo_user.notification_server + '?sid=' + session_id + '&seq=' + 5;
+    url = generateCompleteUrl(url);
     rest.get(url).on('complete', function(data) {
         console.log(data);
     }).on('error', errorCallback);
@@ -76,10 +79,10 @@ function generateCompleteUrl(url) {
     url += '&oauth_consumer_key=' + yahoo_key;
     url += '&realm=yahooapis.com'
     url += '&oauth_nonce=' + randomString(time);
-    url += '&oauth_signature=' + oauth_signature;
+    url += '&oauth_signature=' + yahoo_user.oauth_signature;
     url += '&oauth_signature_method=PLAINTEXT';
     url += '&oauth_timestamp=' + time;
-    url += '&oauth_token=' + querystring.escape(oauth_token);
+    url += '&oauth_token=' + querystring.escape(yahoo_user.oauth_token);
     url += '&oauth_version=1.0';
     url += '&notifyServerToken=1';
     return url;
@@ -89,9 +92,9 @@ function generateCompleteUrl(url) {
 function sendPm(data) {
     var session_id = getSessionIdFromData(data);
     var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + yahoo_user.friend + '?sid=' + session_id;
-    var time = Math.floor(new Date().getTime() / 1000)
-    var oauth_signature = yahoo_secret + '%26' + yahoo_user.request_params['oauth_token_secret'];
-    var oauth_token = yahoo_user.request_params['oauth_token'];
+    var time = Math.floor(new Date().getTime() / 1000);
+    yahoo_user.oauth_signature = yahoo_secret + '%26' + yahoo_user.request_params.oauth_token_secret;
+    yahoo_user.oauth_token = yahoo_user.request_params.oauth_token;
     url = generateCompleteUrl(url);
     var header = {
         'Content-Type': 'application/json',
@@ -106,7 +109,7 @@ function sendPm(data) {
     }).on('success', function(data) {
         if (!error_flag) {
             getMessages(data);
-            }
+        }
     }).on('error', errorCallback);
 
 }
