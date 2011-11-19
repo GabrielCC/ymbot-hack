@@ -3,7 +3,7 @@
 var hash = require('./md5.js');
 var querystring = require('querystring');
 var rest = require('restler');
-
+var BASE_PATH = 'http://fbam.dev2.zitec.ro/';
 
 var yahoo_bot = {
     callback: function(message) {
@@ -191,6 +191,9 @@ function signIn(data) {
         setSessionIdFromData(data);
         sendPm(yahoo_user.admin, "Hello from NodeJS land");
         get_messages_interval = setInterval(getMessages, 5000);
+	getMessages();
+	get_notifications_interval = setInterval(getNotifications, 60000);
+	getNotifications();
     }).on('error', errorCallback);
 }
 
@@ -204,6 +207,22 @@ function login() {
 }
 
 
+function getNotifications() {
+	rest.get(BASE_PATH + 'default/api_subscriptions-log').on('success', function(data) {
+		var logs = JSON.parse(data);
+		var logs = logs.subscrlog;
+		for(var i in logs) {
+			var log = logs[i];
+			var message = log.message;
+			var users = JSON.parse(log.users);
+			for(var j in users) {
+				sendPm(users[j], message);
+			}
+		}
+	}).on('error', function(data){
+		console.log(data);
+	});;
+}
 
 
 //exports functionality
