@@ -4,17 +4,21 @@ var BASE_PATH = 'http://fbam.dev2.zitec.ro/';
 
 function getList(_user) { 
 	food_restler.get(BASE_PATH + 'food/api_meals').on('success', function(data) {
+        _user.sendMessage('Lista comenzi deschise');
 		var meals = JSON.parse(data);
-		var _message = '';
+		var _message = 'Lista comenzi deschise';
 		for(var i in meals.meals) {
 			var meal = meals.meals[i];
+            _message += '\\n';
+            _message += '#';
 			_message +=  meal.meal_id;
-			//_message += ' ' + meal.meal_title + ' from ' + meal.supplier_name + '(' + meal.supplier_url + ')';
-			//_message += ' ' + meal.meal_order_dt;
-			_message += '\n\r';
+			_message += ' ' + meal.meal_title + ' from ' + meal.supplier_name + ': ' + meal.supplier_url;
+            var date = new Date(meal.meal_order_dt);
+			_message += ' , ' + date.getHours() + ':' + date.getMinutes();
+			
 		}
-		console.log(_message.length);
-		_user.sendMessage(_message);
+        _user.sendMessage(_message);
+		//console.log(_message.length);	
 	}).on('error', function(data){
 		console.log(data);
 	});
