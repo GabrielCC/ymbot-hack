@@ -36,7 +36,7 @@ function getList(_user) {
 
 }
 exports.applyRule = function(parser, yahoo) {
-	parser.on('add', '+add number text  |comandati de mancare', function(yahoo_user, _args) {
+	parser.on('add', '+add number text  |: comandati de mancare', function(yahoo_user, _args) {
 		var add_command = /^ ([0-9]*) (.*)$/;
 		var parts = add_command.exec(_args);
 		if(parts) {
@@ -55,11 +55,11 @@ exports.applyRule = function(parser, yahoo) {
 		}
 	});
 
-	parser.on('list', '+list |vezi cine si ce comanda', function(yahoo_user, _args) {
+	parser.on('list', '+list |: vezi cine si ce comanda', function(yahoo_user, _args) {
 		getList(yahoo_user);		
 	});
 
-	parser.on('cancel', '+cancel numar  |te-ai razgandit, anuleaza o comanda', function(yahoo_user, _args) {
+	parser.on('cancel', '+cancel numar  |: te-ai razgandit, anuleaza o comanda', function(yahoo_user, _args) {
 		var delete_command = /^ ([0-9]*)$/;
 		var parts = delete_command.exec(_args);
 		if(parts) {
@@ -76,7 +76,7 @@ exports.applyRule = function(parser, yahoo) {
 		}		
 	});
 
-	parser.on('done', '+done [numar]  |a venit mancarea, anunta pe toata lumea', function(yahoo_user, _args) {
+	parser.on('done', '+done numar  |: a venit mancarea, anunta pe toata lumea', function(yahoo_user, _args) {
 		var regexp = /^ ([0-9]*)$/;
 		var parts = regexp.exec(_args);
 		if( parts ) {
@@ -92,7 +92,7 @@ exports.applyRule = function(parser, yahoo) {
 		}
 	});
 
-	parser.on('view', '+view  |vezi ce comanzi azi', function(yahoo_user, _args) {
+	parser.on('view', '+view  |: vezi ce comanzi azi', function(yahoo_user, _args) {
 		food_restler.get(BASE_PATH + 'food/api_orders', {
 				headers: headers(yahoo_user)} ).on('success', function(data) {
 			var orders = JSON.parse(data);
