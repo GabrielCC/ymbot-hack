@@ -15,6 +15,9 @@ var parser = {
         if (parts) {
             this.processCommand(user, parts[1], parts[2]);
         }
+	else{
+	    this.help(user);
+	}
 	
     },
     processCommand: function(user, command, _args) {
@@ -26,11 +29,13 @@ var parser = {
         }
     },
     help: function(user) {
-        console.log('Unpropper use of the commands');
-        console.log('Available commands:');
+        var _message =  'Unpropper use of the commands\\n';
+        _message += 'Available commands:';
+	_message += '\\n';
         for(var i in this.help_messages) {
-            console.log('+' +  i + '   ' + this.help_messages[i]);
+            _message += '+' +  i + '   ' + this.help_messages[i] + '\\n';
         }
+	user.sendMessage(_message);
     }
 };
 /**
