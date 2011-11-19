@@ -26,7 +26,11 @@ function getList(_user) {
 			_message +=  meal.meal_id;
 			_message += ' ' + meal.meal_title + ' from ' + meal.supplier_name + ': ' + meal.supplier_url;
 			var date = new Date(meal.meal_order_dt);
-			_message += ' , ' + date.getHours() + ':' + date.getMinutes();
+			var minutes = date.getMinutes();
+			if(minutes%10 == minutes) {
+				minutes = '0' + minutes;
+			}
+			_message += ' , ' + date.getHours() + ':' + minutes;
 			
 		}
         _user.sendMessage(_message);	
