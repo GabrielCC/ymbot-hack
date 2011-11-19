@@ -29,11 +29,11 @@ var parser = {
         }
     },
     help: function(user) {
-        var _message =  'Unpropper use of the commands\\n';
-        _message += 'Available commands:';
+        var _message =  'Nu inteleg ce zici tu acolo\\n';
+        _message += 'Raspund la urmatoarele comenzi:';
 	_message += '\\n';
         for(var i in this.help_messages) {
-            _message += '+' +  i + '   ' + this.help_messages[i] + '\\n';
+            _message +=  this.help_messages[i] + '\\n';
         }
 	user.sendMessage(_message);
     }
