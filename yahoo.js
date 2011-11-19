@@ -181,6 +181,10 @@ function sendPm(user, message) {
 }
 
 function errorCallback(data) {
+    var error = JSON.parse(data);
+    if(error.code && error.code == 28) {
+	login();
+    }
     console.log('there was an error');
     console.log(data);
 }
