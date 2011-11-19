@@ -51,12 +51,12 @@ exports.applyRule = function(parser, yahoo) {
 		var parts = delete_command.exec(_args);
 		if(parts) {
 			var data = {
-				meal_id: parts[1],
-				ym_id: yahoo_user.user_id
+				'meal_id': parts[1],
+				'ym_id': yahoo_user.user_id
 			}
-			var url = BASE_PATH + 'food/api_orders/0';
+			var url = BASE_PATH + 'food/api_orders/1';
 			console.log(url);
-			food_restler.del(url, data).on('success', function(data) {
+			food_restler.del(url,  {headers : data} ).on('success', function(data) {
 				console.log(data);
 			}).on('error', function(data) {
 				console.log(data);
