@@ -99,8 +99,8 @@ exports.applyRule = function(parser, yahoo) {
 			orders = orders.orders;
 			var message = 'Comenzile tale actuale:';
 			for(var i in orders) {
-				message += '\\n';
-				message += orders[i].meal_id + ' ' + orders[i].text.replace('\n', '\\n');
+				message += '\\n#';
+				message += orders[i].meal_id + ' - ' + orders[i].text.replace('\n', '\\n');
 			}
 			yahoo_user.sendMessage(message);
 		}).on('error', function(data) {

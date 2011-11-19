@@ -14,8 +14,8 @@ var yahoo_bot = {
 };
 
 var yahoo_user = {
-    username: 'gabrielassistant',
-    password: 'qwaszx110887',
+    username: 'fbam.agent',
+    password: 'qwaszxparola',
     admin: 'gabriel_croitoru11',
     requestToken: false,
     request_params: false,
@@ -136,6 +136,31 @@ function getJsonHeader() {
     return header;
 }
 
+function authorizeBuddy(buddy) {
+    var session_id = yahoo_user.sessionID;
+    //var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + user + '?sid=' + session_id;
+    var url = 'http://developer.messenger.yahooapis.com/v1/buddyrequest/yahoo/' + buddy + '?sid=' + session_id;	
+    url = generateCompleteUrl(url);
+     var header = {
+        'Content-Type': 'application/json',
+        'charset': 'utf-8'
+    };
+    error_flag = false;
+    var message = 'Hai la masa';
+    var smessage = '{"authReason" : \"' + message + '\"}';
+    console.log(url);
+    rest.post(url, {
+	data: smessage,
+	headers: header
+	
+    }).on('success', function(data){
+	console.log(data);
+    }).on('error', function(data){
+	console.log(data);
+    });
+	
+}
+
 function sendPm(user, message) {
     var session_id = yahoo_user.sessionID;
     var url = 'http://developer.messenger.yahooapis.com/v1/message/yahoo/' + user + '?sid=' + session_id;
@@ -238,6 +263,10 @@ exports.login = function() {
 exports.sendMessage = function(user, message) {
     sendPm(user, message);
 };
+
+exports.authorizeBuddy = function(buddy) {
+    authorizeBuddy(buddy);
+}
 
 /**
  * Set the required callback

@@ -2,7 +2,7 @@ var yahoo = require('./yahoo.js');
 var parser = require('./parser.js');
 var fs = require('fs');
 var messager = require('./message.js');
-
+var restler = require('restler');
 
 fs.readdir('./rules', function(err, files) {
 	for(var i in files) {
@@ -18,6 +18,9 @@ yahoo.setCallback(function(_message) {
 	   var _messager = messager.createUser(_message.message.sender, yahoo);
            parser.parse(_messager, _message.message.msg);
         }
+   else if(_message.buddyAuthorize){ 
+	yahoo.authorizeBuddy(_message.buddyAuthorize.sender);
+   }
 });
 yahoo.login();
 //yahoo.sendMessage('gabriel_croitoru11', 'alt test pe aici');
