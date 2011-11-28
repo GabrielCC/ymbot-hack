@@ -5,6 +5,7 @@ var messager = require('./message.js');
 var restler = require('restler');
 
 fs.readdir('./rules', function(err, files) {
+    console.log(files);
 	for(var i in files) {
 		var rule = require('./rules/' + files[i]);
 		rule.applyRule(parser, yahoo);
