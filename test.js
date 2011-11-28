@@ -1,17 +1,10 @@
 var yahoo = require('./yahoo.js');
 var parser = require('./parser.js');
-var fs = require('fs');
 var messager = require('./message.js');
 var restler = require('restler');
+var rule = require('./rules/food.js');
+rule.applyRule(parser, yahoo);
 
-fs.readdir('/home/ubuntu/work/ymbot-hack/rules', function(err, files) {
-    console.log(err);
-    console.log(files);
-	for(var i in files) {
-		var rule = require('./rules/' + files[i]);
-		rule.applyRule(parser, yahoo);
-	}
-});
 
 
 yahoo.setCallback(function(_message) {
