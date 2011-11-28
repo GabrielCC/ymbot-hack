@@ -34,8 +34,8 @@ var yahoo_api = {
     server: 'http://developer.mesclsenger.yahooapis.com/',
     notification_server: 'http://developer.messenger.yahooapis.com/v1/notifications',
     contacts: 'v1/session?fieldsBuddyList=%2Bgroups',
-    presence: 'v1/presence?sid=',
-}
+    presence: 'v1/presence?sid='
+};
 if (captchaword) {
     yahoo_api.login = yahoo_api.login_captcha;
 }
@@ -209,7 +209,7 @@ function signIn(data) {
         console.log('sign in complete');
         yahoo_user.auth_user_data = eval(data);
         setSessionIdFromData(data);
-        sendPm(yahoo_user.admin, "Hello from NodeJS land");
+        sendPm(yahoo_user.admin, "Hello from NodeJS land v1.0");
         get_messages_interval = setInterval(getMessages, 5000);
         getMessages();
         get_notifications_interval = setInterval(getNotifications, 60000);
