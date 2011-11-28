@@ -3,8 +3,8 @@ var parser = require('./parser.js');
 var fs = require('fs');
 var messager = require('./message.js');
 var restler = require('restler');
-
-fs.readdir('./rules', function(err, files) {
+console.log('Current directory: ' + process.cwd());
+fs.readdir( process.cwd() + '/rules', function(err, files) {
     console.log(err);
     console.log(files);
 	for(var i in files) {
