@@ -177,6 +177,10 @@ function errorCallback(data) {
     catch (e) {
         console.log(e);
     }
+    if(data.search('token_expired')) {
+        console.log('do a new a login');
+        login();
+    }
     console.log('there was an error');
     console.log(data);
 }
